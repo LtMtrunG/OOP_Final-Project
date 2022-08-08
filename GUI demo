@@ -1,0 +1,475 @@
+import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+public class HelloApplication extends Application {
+
+    public Scene createStartScene(Stage stage){
+        VBox pane = new VBox(10);
+        pane.setBackground(Background.fill(Color.BLACK));
+        Scene startScene = new Scene(pane, 1000, 600);
+
+        //text
+        Text welcomeText = new Text("Welcome to Jenny Video Store");
+        welcomeText.setFill(Color.WHITE);
+        welcomeText.setFont(new Font("",50));
+
+        //buttons
+        Button startButton = new Button("Start");
+        startButton.setOnAction(e -> stage.setScene(createMenuScene(stage)));
+
+        Button exitButton = new Button("Exit");
+        exitButton.setOnAction(e -> Platform.exit());
+
+        //add the roots to the scene
+        HBox hbox = new HBox(50);
+        hbox.getChildren().addAll(startButton, exitButton);
+        hbox.setAlignment(Pos.CENTER);
+        pane.getChildren().addAll(welcomeText, hbox);
+        pane.setAlignment(Pos.CENTER);
+
+        return startScene;
+    }
+
+    public Scene createMenuScene(Stage stage){
+        VBox pane = new VBox(30);
+        pane.setBackground(Background.fill(Color.BLACK));
+        Scene menuScene = new Scene(pane, 1000, 600);
+
+        Text welcomeText = new Text("Video store");
+        welcomeText.setFill(Color.WHITE);
+        welcomeText.setFont(new Font("",50));
+
+        //Modify Item Function
+        Rectangle itemRect = new Rectangle(150,150);
+        itemRect.setFill(Color.LIGHTGRAY);
+        itemRect.setStrokeWidth(2);
+        itemRect.setStroke(Color.LIGHTCYAN);
+        itemRect.setOnMouseClicked(e -> stage.setScene(createModifyItemScene(stage)));
+
+        Text itemText = new Text("Modify Item");
+        itemText.setFont(new Font(16));
+        itemText.setFill(Color.DARKCYAN);
+
+        StackPane modifyItem = new StackPane(itemRect, itemText);
+        modifyItem.setAlignment(Pos.BOTTOM_CENTER);
+
+        //Modify Customer Function
+        Rectangle customerRect = new Rectangle(150,150);
+        customerRect.setFill(Color.LIGHTGRAY);
+        customerRect.setStrokeWidth(2);
+        customerRect.setStroke(Color.LIGHTCYAN);
+        customerRect.setOnMouseClicked(e -> stage.setScene(createModifyCustomerScene(stage)));
+
+        Text customerText = new Text("Modify Customer");
+        customerText.setFont(new Font(16));
+        customerText.setFill(Color.DARKCYAN);
+
+        StackPane modifyCustomer = new StackPane(customerRect, customerText);
+        modifyCustomer.setAlignment(Pos.BOTTOM_CENTER);
+
+        //Promote Customer Function
+        Rectangle promoteRect = new Rectangle(150,150);
+        promoteRect.setFill(Color.LIGHTGRAY);
+        promoteRect.setStrokeWidth(2);
+        promoteRect.setStroke(Color.LIGHTCYAN);
+        promoteRect.setOnMouseClicked(e -> stage.setScene(createPromoteScene(stage)));
+
+        Text promoteText = new Text("Promote Customer");
+        promoteText.setFont(new Font(16));
+        promoteText.setFill(Color.DARKCYAN);
+
+        StackPane promoteCustomer = new StackPane(promoteRect, promoteText);
+        promoteCustomer.setAlignment(Pos.BOTTOM_CENTER);
+
+        //Rent Item Function
+        Rectangle rentRect = new Rectangle(150,150);
+        rentRect.setFill(Color.LIGHTGRAY);
+        rentRect.setStrokeWidth(2);
+        rentRect.setStroke(Color.LIGHTCYAN);
+        rentRect.setOnMouseClicked(e -> stage.setScene(createRentScene(stage)));
+
+        Text rentText = new Text("Rent an Item");
+        rentText.setFont(new Font(16));
+        rentText.setFill(Color.DARKCYAN);
+
+        StackPane rentItem = new StackPane(rentRect, rentText);
+        rentItem.setAlignment(Pos.BOTTOM_CENTER);
+
+        //Return Item Function
+        Rectangle returnRect = new Rectangle(150,150);
+        returnRect.setFill(Color.LIGHTGRAY);
+        returnRect.setStrokeWidth(2);
+        returnRect.setStroke(Color.LIGHTCYAN);
+        returnRect.setOnMouseClicked(e -> stage.setScene(createReturnScene(stage)));
+
+        Text returnText = new Text("Return an Item");
+        returnText.setFont(new Font(16));
+        returnText.setFill(Color.DARKCYAN);
+
+        StackPane returnItem = new StackPane(returnRect, returnText);
+        returnItem.setAlignment(Pos.BOTTOM_CENTER);
+
+        HBox firstFunctionLine = new HBox(20, modifyItem, modifyCustomer, promoteCustomer, rentItem, returnItem);
+        firstFunctionLine.setAlignment(Pos.CENTER);
+
+        //Display All Items Function
+        Rectangle allItemRect = new Rectangle(150,150);
+        allItemRect.setFill(Color.LIGHTGRAY);
+        allItemRect.setStrokeWidth(2);
+        allItemRect.setStroke(Color.LIGHTCYAN);
+        allItemRect.setOnMouseClicked(e -> stage.setScene(createDisplayItemScene(stage)));
+
+        Text allItemText = new Text("Items");
+        allItemText.setFont(new Font(16));
+        allItemText.setFill(Color.DARKCYAN);
+
+        StackPane allItem = new StackPane(allItemRect, allItemText);
+        allItem.setAlignment(Pos.BOTTOM_CENTER);
+
+        //Display Out-Of-Stock Items Function
+        Rectangle oosItemRect = new Rectangle(150,150);
+        oosItemRect.setFill(Color.LIGHTGRAY);
+        oosItemRect.setStrokeWidth(2);
+        oosItemRect.setStroke(Color.LIGHTCYAN);
+        oosItemRect.setOnMouseClicked(e -> stage.setScene(createOutOfStockScene(stage)));
+
+        Text oosItemText = new Text("Out-of-stock Items");
+        oosItemText.setFont(new Font(16));
+        oosItemText.setFill(Color.DARKCYAN);
+
+        StackPane oosItem = new StackPane(oosItemRect, oosItemText);
+        oosItem.setAlignment(Pos.BOTTOM_CENTER);
+
+        //Display All Customers Function
+        Rectangle allCustomerRect = new Rectangle(150,150);
+        allCustomerRect.setFill(Color.LIGHTGRAY);
+        allCustomerRect.setStrokeWidth(2);
+        allCustomerRect.setStroke(Color.LIGHTCYAN);
+        allCustomerRect.setOnMouseClicked(e -> stage.setScene(createDisplayCustomerScene(stage)));
+
+        Text allCustomerText = new Text("Customers");
+        allCustomerText.setFont(new Font(16));
+        allCustomerText.setFill(Color.DARKCYAN);
+
+        StackPane allCustomer = new StackPane(allCustomerRect, allCustomerText);
+        allCustomer.setAlignment(Pos.BOTTOM_CENTER);
+
+        //Display Group of Customers Function
+        Rectangle groupCustomerRect = new Rectangle(150,150);
+        groupCustomerRect.setFill(Color.LIGHTGRAY);
+        groupCustomerRect.setStrokeWidth(2);
+        groupCustomerRect.setStroke(Color.LIGHTCYAN);
+        groupCustomerRect.setOnMouseClicked(e -> stage.setScene(createGroupCustomerScene(stage)));
+
+        Text groupCustomerText = new Text("Customers by Group");
+        groupCustomerText.setFont(new Font(16));
+        groupCustomerText.setFill(Color.DARKCYAN);
+
+        StackPane groupCustomer = new StackPane(groupCustomerRect, groupCustomerText);
+        groupCustomer.setAlignment(Pos.BOTTOM_CENTER);
+
+        //Search Functions
+        Rectangle searchRect = new Rectangle(150,150);
+        searchRect.setFill(Color.LIGHTGRAY);
+        searchRect.setStrokeWidth(2);
+        searchRect.setStroke(Color.LIGHTCYAN);
+        searchRect.setOnMouseClicked(e -> stage.setScene(createSearchScene(stage)));
+
+        Text searchText = new Text("Search");
+        searchText.setFont(new Font(16));
+        searchText.setFill(Color.DARKCYAN);
+
+        StackPane search = new StackPane(searchRect, searchText);
+        search.setAlignment(Pos.BOTTOM_CENTER);
+
+        HBox secondFunctionLine = new HBox(20, allItem, oosItem, allCustomer, groupCustomer, search);
+        secondFunctionLine.setAlignment(Pos.CENTER);
+
+        pane.getChildren().addAll(welcomeText, firstFunctionLine, secondFunctionLine);
+        pane.setAlignment(Pos.CENTER);
+
+        return menuScene;
+    }
+
+    public Scene createModifyItemScene(Stage stage){
+        VBox pane = new VBox();
+        pane.setBackground(Background.fill(Color.BLACK));
+        Scene scene = new Scene(pane, 1000, 600);
+
+        //button
+        Button backButton = new Button("<<-");
+        backButton.setOnAction(e -> stage.setScene(createMenuScene(stage)));
+        Button displayButton = new Button("Display All Items");
+        displayButton.setOnAction(e -> AlertBox.display("Display all Item"));
+
+        //text
+        Text text = new Text("Modify Item");
+        text.setFill(Color.WHITE);
+        text.setFont(new Font("",50));
+
+        //Text field
+        TextField textField = new TextField();
+        textField.setPromptText("Item");
+        textField.setPrefWidth(300);
+
+        //Combo box
+        ComboBox<String> comboBox = new ComboBox<>();
+        comboBox.getItems().addAll(
+                "Add A New Item",
+                "Update an Existing Item",
+                "Delete an Existing Item"
+        );
+        comboBox.setPromptText("-Choose an Option-");
+        comboBox.setOnAction(e -> {
+            String option = comboBox.getValue();
+            switch (option){
+                case "Add A New Item":
+                    textField.setText("Creating new Item");
+                    break;
+                case "Update an Existing Item":
+                    textField.setPromptText("Enter an Item's ID or Title");
+                    textField.setText("");
+                    int a = 0;
+                    break;
+                case "Delete an Existing Item":
+                    textField.setPromptText("Enter an Item's ID or Title");
+                    textField.setText("");
+                    break;
+            }
+        });
+
+        HBox hbox = new HBox(30);
+        hbox.getChildren().addAll(comboBox, textField, displayButton);
+        hbox.setAlignment(Pos.CENTER);
+        VBox vbox = new VBox(20,text, hbox);
+        vbox.setAlignment(Pos.CENTER);
+
+        pane.getChildren().addAll(backButton,vbox);
+
+        return scene;
+    }
+
+    public Scene createModifyCustomerScene(Stage stage){
+        VBox pane = new VBox();
+        pane.setBackground(Background.fill(Color.BLACK));
+        Scene scene = new Scene(pane, 1000, 600);
+
+        //button
+        Button backButton = new Button("<<-");
+        backButton.setOnAction(e -> stage.setScene(createMenuScene(stage)));
+
+        //text
+        Text text = new Text("Modify Customer");
+        text.setFill(Color.WHITE);
+        text.setFont(new Font("",50));
+        HBox hbox = new HBox(text);
+        hbox.setAlignment(Pos.CENTER);
+
+        pane.getChildren().addAll(backButton,hbox);
+        return scene;
+    }
+
+    public Scene createPromoteScene(Stage stage){
+        VBox pane = new VBox();
+        pane.setBackground(Background.fill(Color.BLACK));
+        Scene scene = new Scene(pane, 1000, 600);
+
+        //button
+        Button backButton = new Button("<<-");
+        backButton.setOnAction(e -> stage.setScene(createMenuScene(stage)));
+
+        //text
+        Text text = new Text("Promote an Existing Customer");
+        text.setFill(Color.WHITE);
+        text.setFont(new Font("",50));
+        HBox hbox = new HBox(text);
+        hbox.setAlignment(Pos.CENTER);
+
+        pane.getChildren().addAll(backButton,hbox);
+        return scene;
+    }
+
+    public Scene createRentScene(Stage stage){
+        VBox pane = new VBox();
+        pane.setBackground(Background.fill(Color.BLACK));
+        Scene scene = new Scene(pane, 1000, 600);
+
+        //button
+        Button backButton = new Button("<<-");
+        backButton.setOnAction(e -> stage.setScene(createMenuScene(stage)));
+
+        //text
+        Text text = new Text("Rent an Item");
+        text.setFill(Color.WHITE);
+        text.setFont(new Font("",50));
+        HBox hbox = new HBox(text);
+        hbox.setAlignment(Pos.CENTER);
+
+        pane.getChildren().addAll(backButton,hbox);
+        return scene;
+    }
+
+    public Scene createReturnScene(Stage stage){
+        VBox pane = new VBox();
+        pane.setBackground(Background.fill(Color.BLACK));
+        Scene scene = new Scene(pane, 1000, 600);
+
+        //button
+        Button backButton = new Button("<<-");
+        backButton.setOnAction(e -> stage.setScene(createMenuScene(stage)));
+
+        //text
+        Text text = new Text("Return an Item");
+        text.setFill(Color.WHITE);
+        text.setFont(new Font("",50));
+        HBox hbox = new HBox(text);
+        hbox.setAlignment(Pos.CENTER);
+
+        pane.getChildren().addAll(backButton,hbox);
+        return scene;
+    }
+
+    public Scene createDisplayItemScene(Stage stage){
+        VBox pane = new VBox();
+        pane.setBackground(Background.fill(Color.BLACK));
+        Scene scene = new Scene(pane, 1000, 600);
+
+        //button
+        Button backButton = new Button("<<-");
+        backButton.setOnAction(e -> stage.setScene(createMenuScene(stage)));
+
+        //text
+        Text text = new Text("Display all Items");
+        text.setFill(Color.WHITE);
+        text.setFont(new Font("",50));
+        HBox hbox = new HBox(text);
+        hbox.setAlignment(Pos.CENTER);
+
+        pane.getChildren().addAll(backButton,hbox);
+        return scene;
+    }
+
+    public Scene createOutOfStockScene(Stage stage){
+        VBox pane = new VBox();
+        pane.setBackground(Background.fill(Color.BLACK));
+        Scene scene = new Scene(pane, 1000, 600);
+
+        //button
+        Button backButton = new Button("<<-");
+        backButton.setOnAction(e -> stage.setScene(createMenuScene(stage)));
+
+        //text
+        Text text = new Text("Display Out-of-stock Items");
+        text.setFill(Color.WHITE);
+        text.setFont(new Font("",50));
+        HBox hbox = new HBox(text);
+        hbox.setAlignment(Pos.CENTER);
+
+        pane.getChildren().addAll(backButton,hbox);
+        return scene;
+    }
+
+    public Scene createDisplayCustomerScene(Stage stage){
+        VBox pane = new VBox();
+        pane.setBackground(Background.fill(Color.BLACK));
+        Scene scene = new Scene(pane, 1000, 600);
+
+        //button
+        Button backButton = new Button("<<-");
+        backButton.setOnAction(e -> stage.setScene(createMenuScene(stage)));
+
+        //text
+        Text text = new Text("Display All Customers");
+        text.setFill(Color.WHITE);
+        text.setFont(new Font("",50));
+        HBox hbox = new HBox(text);
+        hbox.setAlignment(Pos.CENTER);
+
+        pane.getChildren().addAll(backButton,hbox);
+        return scene;
+    }
+
+    public Scene createGroupCustomerScene(Stage stage){
+        VBox pane = new VBox();
+        pane.setBackground(Background.fill(Color.BLACK));
+        Scene scene = new Scene(pane, 1000, 600);
+
+        //button
+        Button backButton = new Button("<<-");
+        backButton.setOnAction(e -> stage.setScene(createMenuScene(stage)));
+
+        //text
+        Text text = new Text("Display Group of Customers");
+        text.setFill(Color.WHITE);
+        text.setFont(new Font("",50));
+        HBox hbox = new HBox(text);
+        hbox.setAlignment(Pos.CENTER);
+
+        pane.getChildren().addAll(backButton,hbox);
+        return scene;
+    }
+
+    public Scene createSearchScene(Stage stage){
+        VBox pane = new VBox();
+        pane.setBackground(Background.fill(Color.BLACK));
+        Scene scene = new Scene(pane, 1000, 600);
+
+        //button
+        Button backButton = new Button("<<-");
+        backButton.setOnAction(e -> stage.setScene(createMenuScene(stage)));
+
+        //text
+        Text text = new Text("Search");
+        text.setFill(Color.WHITE);
+        text.setFont(new Font("",50));
+        HBox hbox = new HBox(text);
+        hbox.setAlignment(Pos.CENTER);
+
+        pane.getChildren().addAll(backButton,hbox);
+        return scene;
+    }
+
+
+    @Override
+    public void start(Stage stage) throws IOException {
+        stage.setTitle("Video Store");
+        stage.setResizable(false);
+        stage.setScene(createStartScene(stage));
+        stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch();
+    }
+}
+
+class AlertBox {
+    public static void display(String title){
+        Stage alertBox = new Stage();
+
+        alertBox.initModality(Modality.APPLICATION_MODAL);
+        alertBox.setTitle(title);
+
+        Pane pane = new Pane();
+        pane.setBackground(Background.fill(Color.BLACK));
+        Scene scene = new Scene(pane, 600,400);
+        alertBox.setScene(scene);
+        alertBox.showAndWait();
+    }
+}
