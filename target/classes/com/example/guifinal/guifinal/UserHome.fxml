@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guifinal.UserHomeController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="920.0" spacing="10.0" style="-fx-background-color: #F4F4FC;">
+         <children>
+            <Label prefHeight="17.0" prefWidth="920.0" text="Home">
+               <VBox.margin>
+                  <Insets left="20.0" top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Cambria Bold" size="36.0" />
+               </font></Label>
+            <HBox alignment="CENTER" prefHeight="230.0" prefWidth="900.0" style="-fx-background-color: #FFF; -fx-background-radius: 20;">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <VBox alignment="CENTER" prefHeight="230.0" prefWidth="276.0">
+                     <children>
+                        <Label text="Welcome">
+                           <font>
+                              <Font name="Cambria Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="username" prefHeight="44.0" prefWidth="245.0">
+                           <font>
+                              <Font name="Cambria Bold Italic" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label text="We are happy to see you here today.">
+                           <font>
+                              <Font name="Cambria Italic" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="178.0" fitWidth="325.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../java/Imagine/WelcomeImage.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <VBox prefHeight="424.0" prefWidth="460.0" style="-fx-background-radius: 20; -fx-background-color: #FFF;">
+                     <children>
+                        <Label text="About">
+                           <font>
+                              <Font name="Cambria Bold" size="64.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="40.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Us">
+                           <VBox.margin>
+                              <Insets left="40.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Cambria Bold" size="72.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="90.0" prefWidth="348.0" text="&lt;Discription&gt;">
+                           <VBox.margin>
+                              <Insets left="40.0" right="40.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin></VBox>
+                  <ImageView fitHeight="424.0" fitWidth="410.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="20.0" right="10.0" />
+                     </HBox.margin></ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
