@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1320.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guifinal.LoginController">
+    <children>
+      <StackPane prefHeight="800.0" prefWidth="1406.0" style="-fx-background-color: #F4F4FC;">
+         <children>
+            <ImageView fitHeight="830.0" fitWidth="1440.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../java/Imagine/LoginImagine.png" />
+               </image>
+            </ImageView>
+            <VBox alignment="TOP_CENTER" prefHeight="810.0" prefWidth="668.0">
+               <children>
+                  <Label text="Welcome" textFill="#fafafa">
+                     <font>
+                        <Font name="Cambria Bold" size="72.0" />
+                     </font>
+                  </Label>
+                  <Label text="to Jenny Video Store" textFill="#fafafa">
+                     <font>
+                        <Font name="Cambria Bold" size="70.0" />
+                     </font>
+                  </Label>
+                      <VBox fx:id="loginPane" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="350.0" prefWidth="370.0" style="-fx-background-color: rgba(0,0,0,0.5); -fx-background-radius: 20; -fx-border-radius: 20;">
+                          <children>
+                              <Label text="Login" textFill="#fafafa">
+                                  <font>
+                                      <Font name="Cambria" size="50.0" />
+                                  </font>
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                              </Label>
+                        <Label fx:id="errorMessage" alignment="CENTER" prefHeight="18.0" prefWidth="325.0" textFill="#ed4337">
+                           <font>
+                              <Font name="Cambria Bold" size="20.0" />
+                           </font>
+                        </Label>
+                              <TextField fx:id="username" prefHeight="25.0" prefWidth="250.0" promptText="Username" style="-fx-background-radius: 10; -fx-border-radius: 10;">
+                                  <VBox.margin>
+                                      <Insets left="20.0" right="20.0" top="20.0" />
+                                  </VBox.margin>
+                              </TextField>
+                        <PasswordField fx:id="password" promptText="Password" style="-fx-background-radius: 10; -fx-border-radius: 10;">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" top="20.0" />
+                           </VBox.margin>
+                        </PasswordField>
+                              <CheckBox fx:id="checkBoxRememberMe" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#handleCheckBoxRememberMe" prefHeight="17.0" prefWidth="322.0" text="Remember Me" textFill="#fafafa">
+                                  <VBox.margin>
+                                      <Insets top="10.0" />
+                                  </VBox.margin>
+                              </CheckBox>
+                              <Button mnemonicParsing="false" onAction="#onLoginButtonClick" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0072A0;" text="Login" textFill="WHITE">
+                                  <VBox.margin>
+                                      <Insets top="20.0" />
+                                  </VBox.margin>
+                                  <font>
+                                      <Font name="System Bold" size="18.0" />
+                                  </font>
+                              </Button>
+                              <Label text="Forget Password?" textFill="#0072a0">
+                                  <font>
+                                      <Font name="System Bold" size="14.0" />
+                                  </font>
+                                  <VBox.margin>
+                                      <Insets top="30.0" />
+                                  </VBox.margin>
+                              </Label>
+                              <Label onMouseClicked="#onCreateAnAccountClick" text="Create An Account" textFill="#0072a0">
+                                  <font>
+                                      <Font name="System Bold" size="14.0" />
+                                  </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                              </Label>
+                          </children>
+                     <VBox.margin>
+                        <Insets bottom="30.0" top="80.0" />
+                     </VBox.margin>
+                      </VBox>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+    </children>
+</AnchorPane>
