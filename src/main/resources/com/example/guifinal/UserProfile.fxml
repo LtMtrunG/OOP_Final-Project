@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guifinal.UserProfileController">
+   <children>
+      <VBox prefHeight="800.0" prefWidth="920.0" spacing="10.0" style="-fx-background-color: #F4F4FC;">
+         <children>
+            <Label text="Profile">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <font>
+                  <Font name="Cambria Bold" size="36.0" />
+               </font></Label>
+            <HBox>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <VBox prefHeight="286.0" prefWidth="482.0" spacing="10.0" style="-fx-background-color: #FFF; -fx-background-radius: 20;">
+                     <children>
+                        <HBox>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label text="ID:">
+                                 <font>
+                                    <Font name="Cambria" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="id" text="ID">
+                                 <font>
+                                    <Font name="Cambria Italic" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="80.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label text="Name:">
+                                 <font>
+                                    <Font name="Cambria" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="name" text="Name">
+                                 <font>
+                                    <Font name="Cambria Italic" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="52.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label text="Address:">
+                                 <font>
+                                    <Font name="Cambria" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="address" text="Address">
+                                 <font>
+                                    <Font name="Cambria Italic" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="35.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label text="Phone:">
+                                 <font>
+                                    <Font name="Cambria" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="phone" text="Phone">
+                                 <font>
+                                    <Font name="Cambria Italic" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="48.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label text="Username:">
+                                 <font>
+                                    <Font name="Cambria" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="username" text="User">
+                                 <font>
+                                    <Font name="Cambria Italic" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="18.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label text="Password:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="password" prefHeight="36.0" prefWidth="97.0" text="Password">
+                                 <font>
+                                    <Font name="Cambria Italic" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="70.0" prefWidth="442.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" right="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#onEditProfileButtonClick" prefHeight="46.0" prefWidth="169.0" style="-fx-background-color: #878787;" text="Edit Profile" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria Bold" size="24.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="313.0" prefWidth="380.0" spacing="10.0" style="-fx-background-color: #FFF; -fx-background-radius: 20;">
+                     <HBox.margin>
+                        <Insets left="20.0" right="10.0" />
+                     </HBox.margin>
+                     <children>
+                        <Circle fill="#f8f5f8" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Label fx:id="accountType" text="Guest Account">
+                           <font>
+                              <Font name="Cambria Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <Label text="Succesful Return: ">
+                                 <font>
+                                    <Font name="Cambria Italic" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="successfulReturn" text="2">
+                                 <font>
+                                    <Font name="Cambria Italic" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox>
+               <VBox.margin>
+                  <Insets left="20.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Label prefHeight="30.0" prefWidth="185.0" text="List of Rentals">
+                     <font>
+                        <Font name="Cambria Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" onAction="#onReturnButtonClick" prefHeight="33.0" prefWidth="151.0" style="-fx-background-color: #878787; -fx-background-radius: 10;" text="RETURN" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="580.0" right="40.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <TableView fx:id="rentalList" prefHeight="311.0" prefWidth="880.0" style="-fx-background-radius: 20;">
+              <columns>
+                <TableColumn fx:id="idColumn" prefWidth="123.0" text="ID" />
+                <TableColumn fx:id="titleColumn" prefWidth="391.0" text="Title" />
+                  <TableColumn fx:id="rentalTypeColumn" minWidth="0.0" prefWidth="111.0" text="Rental Type" />
+                  <TableColumn fx:id="loanTypeColumn" minWidth="2.0" prefWidth="73.0" text="Loan Type" />
+                  <TableColumn fx:id="feeColumn" prefWidth="88.0" text="Fee (USD)" />
+                  <TableColumn fx:id="genreColumn" minWidth="0.0" prefWidth="93.0" text="Genres" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
