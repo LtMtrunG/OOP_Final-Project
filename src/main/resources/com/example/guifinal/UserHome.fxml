@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guifinal.UserHomeController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="920.0" spacing="10.0" style="-fx-background-color: #F4F4FC;">
+         <children>
+            <Label prefHeight="17.0" prefWidth="920.0" text="Home">
+               <VBox.margin>
+                  <Insets left="20.0" top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Cambria Bold" size="36.0" />
+               </font></Label>
+            <HBox alignment="CENTER" prefHeight="250.0" prefWidth="880.0" style="-fx-background-color: #FFF; -fx-background-radius: 20;">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <VBox alignment="CENTER" prefHeight="230.0" prefWidth="276.0">
+                     <children>
+                        <Label text="Welcome">
+                           <font>
+                              <Font name="Cambria Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="username" alignment="CENTER" prefHeight="44.0" prefWidth="278.0">
+                           <font>
+                              <Font name="Cambria Bold Italic" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label text="We are happy to see you here today.">
+                           <font>
+                              <Font name="Cambria Italic" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="178.0" fitWidth="325.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Imagine/WelcomeImage.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <VBox>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <children>
+                        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="325.0" prefWidth="400.0" style="-fx-background-radius: 20; -fx-background-color: #FFF;">
+                           <children>
+                              <Label prefWidth="327.0" text="The OOP Team">
+                                 <font>
+                                    <Font name="Cambria Bold" size="48.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="35.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Separator prefWidth="200.0">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Separator>
+                              <Label prefHeight="35.0" prefWidth="350.0" text="Phan Le Quynh Anh  -  s3927427">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="106.0" layoutY="128.0" prefHeight="35.0" prefWidth="350.0" text="Le Tran Minh Trung  -  s3927071">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label layoutX="106.0" layoutY="163.0" prefHeight="35.0" prefWidth="350.0" text="Tran Thanh Tung      -  s3927562">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label layoutX="106.0" layoutY="198.0" prefHeight="35.0" prefWidth="342.0" text="Nguyen Vi Phi Long -  s3904632">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Label prefHeight="35.0" prefWidth="398.0" text="Version 1.0 Released on 18-Sep-2022 " textFill="#807f7f">
+                           <font>
+                              <Font name="System Italic" size="24.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="40.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="400.0" prefWidth="450.0" style="-fx-background-radius: 20; -fx-background-color: #FFF;">
+                     <children>
+                        <Label text="About">
+                           <font>
+                              <Font name="Cambria Bold" size="64.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="40.0" top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Us">
+                           <VBox.margin>
+                              <Insets left="40.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Cambria Bold" size="72.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="164.0" prefWidth="348.0" text="Products in the future will be shared or rented. Customers are looking for options to rent or share things rather than purchase their own. And we are the answer to that need." textAlignment="JUSTIFY" wrapText="true">
+                           <VBox.margin>
+                              <Insets left="40.0" right="40.0" top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin></VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

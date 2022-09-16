@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minHeight="450.0" minWidth="400.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guifinal.EditItemDialogController">
+    <children>
+        <VBox alignment="CENTER" layoutX="131.0" layoutY="50.0" maxHeight="-Infinity" prefHeight="450.0" prefWidth="390.0" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+            <children>
+                <Text strokeWidth="0.0" text="Edit Item">
+                    <font>
+                        <Font name="Cambria Bold" size="36.0" />
+                    </font></Text>
+                <Label textFill="#ed4337">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+                    <children>
+                        <Label alignment="CENTER_RIGHT" minWidth="100.0" text="Title" />
+                        <TextField fx:id="tfTitle" prefHeight="25.0" prefWidth="250.0" style="-fx-border-color: #878787; -fx-border-radius: 5; -fx-background-radius: 5;" HBox.hgrow="ALWAYS" />
+                    </children>
+                    <padding>
+                        <Insets right="30.0" />
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+                    <children>
+                        <Label alignment="CENTER_RIGHT" minWidth="100.0" text="Rental Type" />
+                        <ChoiceBox fx:id="cbRentalType" maxHeight="-Infinity" prefHeight="25.0" prefWidth="250.0" style="-fx-background-color: #FFF; -fx-background-radius: 5; -fx-border-color: #878787; -fx-border-radius: 5;" />
+                    </children>
+                    <padding>
+                        <Insets right="30.0" />
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+                    <children>
+                        <Label alignment="CENTER_RIGHT" minWidth="100.0" text="Loan Type" />
+                        <ChoiceBox fx:id="cbLoanType" maxHeight="-Infinity" prefHeight="25.0" prefWidth="250.0" style="-fx-background-color: #FFF; -fx-background-radius: 5; -fx-border-color: #878787; -fx-border-radius: 5;" />
+                    </children>
+                    <padding>
+                        <Insets right="30.0" />
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="189.0" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+                    <children>
+                        <Label alignment="CENTER_RIGHT" minWidth="100.0" text="Fee (USD)" />
+                        <TextField fx:id="tfFee" maxHeight="-Infinity" prefHeight="25.0" prefWidth="250.0" style="-fx-background-radius: 5; -fx-border-color: #878787; -fx-border-radius: 5;" HBox.hgrow="ALWAYS" />
+                    </children>
+                    <padding>
+                        <Insets right="30.0" />
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+                    <children>
+                        <Label alignment="CENTER_RIGHT" minWidth="100.0" text="Genre" />
+                        <ChoiceBox fx:id="cbGenre" maxHeight="-Infinity" prefHeight="25.0" prefWidth="250.0" style="-fx-background-color: #FFF; -fx-background-radius: 5; -fx-border-color: #878787; -fx-border-radius: 5;" />
+                    </children>
+                    <padding>
+                        <Insets right="30.0" />
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="317.0" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+                    <children>
+                        <Label alignment="CENTER_RIGHT" minWidth="100.0" text="Number of copies" />
+                        <TextField fx:id="tfCopies" prefHeight="25.0" prefWidth="250.0" style="-fx-background-radius: 5; -fx-border-color: #878787; -fx-border-radius: 5;" HBox.hgrow="ALWAYS" />
+                    </children>
+                    <padding>
+                        <Insets right="30.0" />
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" prefWidth="390.0">
+                    <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#onUpdateItemClick" prefHeight="30.0" prefWidth="67.0" style="-fx-background-color: #2196f3;" text="Update" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Button>
+                    </children>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <padding>
+                        <Insets right="30.0" />
+                    </padding>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
