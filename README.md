@@ -18,5 +18,5 @@ when you open the project please open the folder "OOP_Final-Project-main" to avo
 To run the program, go to src -> java -> com.example.guifinal -> Application -> Run
 
 Or go to Edit Configurations (Top right corner next to "Run" button) -> Add new run configuration... 
-         -> Application -> Choose main class -> Application -> OK
+         -> Application -> Choose main class -> Application -> OK -> Run
           
