@@ -1,6 +1,7 @@
 RMIT University Vietnam
 
 Course: INTE2512 Object-Oriented Programming
+
 Assessment: Final Project - Jenny Video Store
 
 Author: Team 9: 
