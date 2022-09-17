@@ -17,9 +17,11 @@ Reflection:
 		Password: oop
 	- We were able to make the account's promotion process automatically done by the system. 
 	However, we did not have time to record and edit a new video so the "Promote" button still 
-	appeared in the demonstration video, but it had been removed in real application.
-	- Throughout the project, all members in the team did not familiar with GitHub so used teams
-	as the main mean of sharing and uploading code. We only uploaded the project to GitHub when
+	appeared in the demostation video, but it had been removed in real application.
+	- Some features were not completed such as "Remember me" and "Forget Password?" due to the 
+	limit of tools and time.
+	- Throughout the project, all members in the team did not familiar with github so used teams
+	as the main mean of sharing and uploading code. We only uploaded the project to github when 
 	it entered the final stage.
 
 Peer Evaluation:
@@ -30,4 +32,4 @@ Peer Evaluation:
 
 GitHub repo URL:  https://github.com/LtMtrunG/OOP_Final-Project.git
 
-Demonstration Video (Youtube) URL: https://youtu.be/adNVPSqTUjA
+Demonstation Video (Youtube) URL: https://youtu.be/adNVPSqTUjA
