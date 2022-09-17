@@ -54,7 +54,7 @@
                   <Insets left="20.0" right="20.0" top="10.0" />
                </VBox.margin>
                <children>
-                  <Label text="Addres: ">
+                  <Label text="Address: ">
                      <font>
                         <Font name="Cambria Bold" size="18.0" />
                      </font>
