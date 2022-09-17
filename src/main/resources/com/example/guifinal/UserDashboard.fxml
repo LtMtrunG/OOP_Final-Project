@@ -44,7 +44,7 @@
                <Font name="Cambria Bold" size="24.0" />
             </font>
          </Button>
-         <Button fx:id="logOut" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#onLogOutButtonClick" prefHeight="60.0" prefWidth="400.0" style="-fx-background-color: transaprent;" text="Log out">
+         <Button fx:id="logOut" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#onLogOutButtonClick" prefHeight="60.0" prefWidth="400.0" style="-fx-background-color: transparent;" text="Log out">
             <font>
                <Font name="Cambria Bold" size="24.0" />
             </font>

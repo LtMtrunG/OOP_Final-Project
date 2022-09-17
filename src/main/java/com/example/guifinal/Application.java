@@ -15,13 +15,11 @@ import javafx.stage.WindowEvent;
 import java.io.IOException;
 
 public class Application extends javafx.application.Application {
-    double x,y;
     public static ItemList itemList = new ItemList();
     public static CustomerList customerList = new CustomerList();
 
     @Override
     public void start(Stage stage) throws IOException {
-        System.out.println(System.getProperty("user.dir"));
         Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
         stage.initStyle(StageStyle.DECORATED);
 
