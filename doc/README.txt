@@ -20,8 +20,8 @@ Reflection:
 	appeared in the demostation video, but it had been removed in real application.
 	- Some features were not completed such as "Remember me" and "Forget Password?" due to the 
 	limit of tools and time.
-	- Throughout the project, all members in the team did not familiar with github so used teams
-	as the main mean of sharing and uploading code. We only uploaded the project to github when 
+	- Throughout the project, all members in the team were not familiar with GitHub so used teams
+	as the main mean of sharing and uploading code. We only uploaded the project to GitGub when 
 	it entered the final stage.
 
 Peer Evaluation:
