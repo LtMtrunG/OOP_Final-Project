@@ -193,16 +193,9 @@ public class UserItemController implements Initializable {
                         rentTime++;
 
                         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                        alert.setTitle("Rent Item");
-
-                        // Header Text: null
-                        alert.setHeaderText(null);
-                        alert.setContentText("Rent Item successfully!");
-
-                        alert.showAndWait();
 
                         //if the user is VIP account and have 10 or more successfully return time.
-                        if(LoginController.account instanceof VIPAccount & LoginController.account.getSuccessfullyReturn() == 10){
+                        if(LoginController.account instanceof VIPAccount & LoginController.account.getSuccessfullyReturn() >= 10){
                             Alert alert1 = new Alert(Alert.AlertType.CONFIRMATION);
                             alert1.setTitle("Free Rent");
 
@@ -210,10 +203,10 @@ public class UserItemController implements Initializable {
                             alert1.setHeaderText(null);
                             alert1.setContentText("You have earned 100 reward points or more. Do you want to change the reward point for a free rent?");
 
-                            Optional<ButtonType> option = alert.showAndWait();
+                            Optional<ButtonType> option = alert1.showAndWait();
 
                             if(option.get() == ButtonType.OK){
-                                LoginController.account.setSuccessfullyReturn(0);
+                                LoginController.account.setSuccessfullyReturn(((VIPAccount) LoginController.account).getSuccessfullyReturn() - 10);
                                 Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
                                 alert2.setTitle("Rent Item");
 
@@ -245,6 +238,14 @@ public class UserItemController implements Initializable {
                                 return;
                             }
                         }
+
+                        alert.setTitle("Rent Item");
+
+                        // Header Text: null
+                        alert.setHeaderText(null);
+                        alert.setContentText("Rent Item successfully!");
+
+                        alert.showAndWait();
 
                         itemTable.getItems().clear();
                         data = FXCollections.observableArrayList(Application.itemList.getList());

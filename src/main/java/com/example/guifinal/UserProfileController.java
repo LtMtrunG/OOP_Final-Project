@@ -103,7 +103,7 @@ public class UserProfileController implements Initializable {
             alert.showAndWait();
 
             successfulReturn.setText(String.valueOf(LoginController.account.getSuccessfullyReturn()));
-            if(LoginController.account instanceof RegularAccount & LoginController.account.getSuccessfullyReturn() == 5){
+            if(!(LoginController.account instanceof VIPAccount) & LoginController.account instanceof RegularAccount & LoginController.account.getSuccessfullyReturn() == 5){
                 //reset the successful return
                 LoginController.account.setSuccessfullyReturn(0);
 
