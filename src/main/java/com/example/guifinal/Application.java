@@ -15,7 +15,6 @@ import javafx.stage.WindowEvent;
 import java.io.IOException;
 
 public class Application extends javafx.application.Application {
-    double x,y;
     public static ItemList itemList = new ItemList();
     public static CustomerList customerList = new CustomerList();
 
